@@ -12,7 +12,7 @@ class OpenAiService
                       },
                       body: { 
                         model: 'dall-e-3', 
-                        prompt: prompt, 
+                        prompt: 'illustration like American comic taste and sentense that gives users one shot gag in ENGLISH.',
                         size: size, 
                         quality: quality, 
                         n: n 
