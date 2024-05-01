@@ -1,0 +1,16 @@
+<h1>YUMETUDUKI</h1>
+<p>文章を入力して画像を生成してみよう！</p>
+
+<%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
+  <%= form.label :prompt, '夢の入力欄:' %>
+  <%= form.text_field :prompt %><br/>
+  <%= form.submit '更新', class: 'btn btn-primary' %>
+<% end %>
+
+<% if @error %>
+  <p><%= @error %></p>
+<% elsif @image_url %>
+  <img src="<%= @image_url %>" alt="Generated Image">
+<% else %>
+  <p>まだ画像が出力されていません。</p>
+<% end %>
