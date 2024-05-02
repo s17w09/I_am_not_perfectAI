@@ -11,7 +11,11 @@
         <div class="mb-3">
           <%= f.label :一言で表現して %>
           <%= f.text_field :title, class: 'form-control' %>
-        </div>  
+        </div>
+        <div class="mb-3">
+        <%= f.label :画像アップロード %>
+        <%= f.file_field:board_image, class: 'form-control' %>
+        </div>
         <%= f.submit '投稿する', class: 'btn btn-primary' %>
       <% end %>
     </div>
