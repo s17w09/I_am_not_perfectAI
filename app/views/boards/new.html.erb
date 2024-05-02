@@ -1,24 +1,20 @@
-<div class="container"> 
-  <div class="form-group">    
-   <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <h1>掲示板作成</h1>
-      <%= form_with model: @board do |f| %>
-        <div class="mb-3">
-          <%= f.label :投稿者名 %>
-          <%= f.text_field :name, class: 'form-control' %>
-        </div>
-        <div class="mb-3">
-          <%= f.label :一言で表現して %>
-          <%= f.text_field :title, class: 'form-control' %>
-        </div>
-        <div class="mb-3">
-        <%= f.label :画像アップロード %>
-        <%= f.file_field:board_image, class: 'form-control' %>
-        </div>
-        <%= f.submit '投稿する', class: 'btn btn-primary' %>
-      <% end %>
-    </div>
-   </div>
-  </div>
+<div class="w-5/6 mx-auto max-w-screen-xl">
+
+  <h1 class = "font-Dela Gothic One">出展作品の作成</h1>
+
+    <%= form_with model: @board do |f| %>
+      <div class="w-5/6 mx-auto max-w-screen-xl">
+        <%= f.label :出展者名 %>
+        <%= f.text_field :name, class: "input input-bordered flex items-center gap-2" %>
+        <%= f.label :出展作品 %>
+        <%= f.text_field :title, class: "input input-bordered flex items-center gap-2", rows: 40 %>
+      </div>
+      <div class="w-5/6 mx-auto max-w-screen-xl">
+        <%= f.label :出展作品を額縁に飾る %>
+        <%= f.file_field :board_image %>
+      </div>
+      <%= f.submit '出展する', class: 'btn btn-primary' %>
+    <% end %>
+
+</div>
 </div>

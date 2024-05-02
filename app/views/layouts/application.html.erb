@@ -4,21 +4,25 @@
     <title>KodomoGokoro</title>
     
     <!-- daisyUIの設定 -->
+    <html>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
+      rel="preconnect" href="https://fonts.googleapis.com"
+      rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet"
+
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ここまで -->
-
   </head>
-
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <%= render 'shared/header' %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
   </body>
 </html>
+    <!-- ここまで -->
