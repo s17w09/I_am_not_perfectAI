@@ -22,7 +22,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :title)
+    params.require(:board).permit(:name, :title, :board_image)
   end
 
 end
