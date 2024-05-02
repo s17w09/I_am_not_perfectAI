@@ -3,7 +3,7 @@
    <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <h1>掲示板作成</h1>
-      <%= form_with url: root_path do |f| %>
+      <%= form_with model: @board do |f| %>
         <div class="mb-3">
           <%= f.label :投稿者名 %>
           <%= f.text_field :name, class: 'form-control' %>
@@ -11,11 +11,7 @@
         <div class="mb-3">
           <%= f.label :一言で表現して %>
           <%= f.text_field :title, class: 'form-control' %>
-        </div>
-        <div class="mb-3">
-          <%= f.label :生成された画像をアップロードする %>
-          <%= f.file_field :board_image, class: 'form-control' %>
-        </div>
+        </div>  
         <%= f.submit '投稿する', class: 'btn btn-primary' %>
       <% end %>
     </div>

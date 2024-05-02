@@ -1,19 +1,14 @@
 class BoardsController < ApplicationController
   def index
-    @board = Board.all
-  end
-    
-  def show
-    @board = Board.find(board_params)
+    @boards = Board.all.order(created_at: :desc)
   end
 
   def new
     @board = Board.new
-    @board = board.build
   end
 
   def create
-    @board = board.build(board_params)
+    @board = Board.new(board_params)
 
     if @board.save
       flash[:notice] = '投稿しました！'
@@ -23,4 +18,11 @@ class BoardsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  private
+
+  def board_params
+    params.require(:board).permit(:name, :title)
+  end
+
 end
