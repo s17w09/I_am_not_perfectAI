@@ -1,0 +1,24 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= board.id %>">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex">
+          <h4 class="card-title">
+            <%= link_to board.title, '#' %>
+          </h4>
+          <div class='ms-auto'>
+            <%= link_to '#', id: 'button-edit-#{board.id}' do %>
+              <i class="bi bi-pencil-fill"></i>
+            <% end %>
+            <%= link_to '#', id: 'button-delete-#{board.id}', method: :delete, data: {confirm: ''} do %>
+              <i class="bi bi-trash-fill"></i>
+            <% end %>
+          </div>
+        </div>
+        <ul class="list-inline">
+          <li><i class="bi bi-person"></i><%= board.name %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
