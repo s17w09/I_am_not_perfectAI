@@ -1,0 +1,39 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= board.id %>">
+    <div class="card">
+      <% if board.board_image.present? %>  
+      <%= image_tag board.board_image.url %>
+      <% else %>
+      <h2>画像がありません</h2>
+      <% end %>
+
+      <div class="card-body">
+        <div class="d-flex">
+          <h4 class="card-title">
+            <%= link_to board.title, board_path(board) %>
+          </h4>
+          <div class='ms-auto'>
+          <% if board.user == current_user %>
+          <div class='mr10 float-right'>
+            <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
+              <i class="bi bi-pencil-fill"></i>
+            <% end %>
+            <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: '削除しますか？' } do %>
+              <i class="bi bi-trash-fill"></i>
+            <% end %>
+          </div>
+          <% else %>
+          <div class='ms-auto'>
+          <%= render 'boards/bookmark_button', { board: board } %>
+        </div>
+      <% end %>
+          </div>
+        </div>
+        <ul class="list-inline">
+          <li><i class="bi bi-person"></i>投稿者名</li>
+        </ul>
+        <p class="card-text">AIでボケてっ</p>
+      </div>
+    </div>
+  </div>
+</div>
