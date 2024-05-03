@@ -4,6 +4,8 @@
     <title>KodomoGokoro</title>
     
     <!-- daisyUIの設定 -->
+    <html>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
     <link
@@ -12,14 +14,18 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+ 
     <!-- ここまで -->
 
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
+  </head>
+  
   <body>
-    <%= render 'shared/header' %>
-      <%= yield %>
-    <%= render 'shared/footer' %>
-    </main>
+  <%= render 'shared/header' %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
   </body>
 </html>

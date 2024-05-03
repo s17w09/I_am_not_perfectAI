@@ -9,17 +9,13 @@ module.exports = {
   ],
 
   theme: {
-    fontFamily: {
-      Dela Gothic One: ["Dela Gothic One", sans-serif],
     },
-    extend: {
-      
+    extend: {    
     },
   },
+  
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/container-queries'),
     require('daisyui'),
+    
   ]
 }
