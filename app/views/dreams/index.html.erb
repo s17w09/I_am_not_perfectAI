@@ -1,18 +1,9 @@
-<h1>君の名は</h1>
-<p>文章を入力して画像を生成してみよう！</p>
-<p>生成された画像は、自動で保存できません。投稿される場合にはご自身の媒体に保存ください</p>
+<p>生成された画像は、自動で保存されません。投稿される場合にはご自身の媒体に保存ください</p>
 
 <%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
-  <%= form.label :prompt, '夢の入力欄:' %>
   <%= form.text_field :prompt %><br/>
   <%= form.submit '画像を生成する', class: 'btn btn-primary' %>
-  <%= link_to 'AIボケを投稿する', new_board_path, class: 'btn btn-primary' %>
+  <%= link_to '作品をを出展する', new_board_path, class: 'btn btn-primary' %>
 <% end %>
 
-<% if @error %>
-  <p><%= @error %></p>
-<% elsif @image_url %>
-  <img src="<%= @image_url %>" alt="Generated Image">
-<% else %>
-  <p>まだ画像が出力されていません。</p>
-<% end %>
+

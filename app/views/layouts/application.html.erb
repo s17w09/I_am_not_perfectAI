@@ -12,17 +12,20 @@
       href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
-      rel="preconnect" href="https://fonts.googleapis.com"
-      rel="preconnect" href="https://fonts.gstatic.com" crossorigin
-      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet"
-
     />
     <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <!-- ここまで -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
   </head>
+  
   <body>
   <%= render 'shared/header' %>
   <%= yield %>
   <%= render 'shared/footer' %>
   </body>
 </html>
-    <!-- ここまで -->

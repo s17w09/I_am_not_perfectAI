@@ -1,19 +1,17 @@
-
-  <div id="board-id-<%= board.id %>">
-    <div class="card">
-      <div class="card-body">
-        <div class="d-flex">
-          <h4 class="card-title">
-            <%= board.title %>
-          </h4></div>
-<ul class="list-inline">
- <%= board.name %>
- <% if board.board_image.present? %>
- <%= image_tag board.board_image.url %>
- <% else %>
- <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
-<% end %>
-</ul>
+<div class="w-5/6 mx-auto max-w-screen-xl" >
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <% if board.board_image.present? %>
+      <figure><%= image_tag board.board_image.url %></figure>
+    <% else %>
+       <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
+    <% end %>
+  <div class="card-body">
+    <h2 class="card-title">「<%= board.title %>」</h2>
+      <p><%= board.name %>さんの作品</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Xでシェアする</button>
+      </div>
+  </div>
+  </div>
 </div>
-
 </div>
