@@ -18,3 +18,4 @@ class DreamsController < ApplicationController
       redirect_to dreams_path
     end
   end
+  
