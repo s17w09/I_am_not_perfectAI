@@ -1,9 +1,13 @@
-<p>生成された画像は、自動で保存されません。投稿される場合にはご自身の媒体に保存ください</p>
+<div class="w-5/6 mx-auto max-w-screen-xl">
+<div class="font-per">Create images</h1>
+<p>生成された画像は、自動で保存されません。出展する際には必ずご自身の媒体に保存ください。</p>
 
 <%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
   <%= form.text_field :prompt %><br/>
-  <%= form.submit '画像を生成する', class: 'btn btn-primary' %>
-  <%= link_to '作品を出展する', new_board_path, class: 'btn btn-primary' %>
+  <div class="flex justify-between">
+  <%= form.submit '画像を生成する', class: 'btn btn-primary mb-10' %>
+  <%= link_to '作品を出展する', new_board_path, class: 'btn btn-primary mb-10' %>
+  </div>
 <% end %>
 
 <% if @error %>
@@ -13,4 +17,5 @@
 <% else %>
   <p>まだ画像が出力されていません。</p>
 <% end %>
+</div>
 

@@ -1,10 +1,11 @@
-<div class="container pt-3 font-kiwimaru">
-  <h1 class="line-through">投稿一覧</h1>
+<div class= "w-5/6 mx-auto max-w-screen-xl">
+<div class="container pt-3">
+  <h1 class="font-per">Gallary</h1>
   <%= link_to '新規投稿する', new_board_path, class: 'btn btn-primary' %>
   <%= link_to '画像を生成する', dreams_path, class: 'btn btn-primary' %>
   <div class="row">
     <div class="col-12">
-      <div class="row">
+      <div>
         <% if @boards.present? %>
           <%= render @boards %>
         <% else %>
@@ -13,6 +14,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 
