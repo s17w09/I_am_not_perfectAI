@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
+  <html>
+    <head>
+      <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+
+      <title>KodomoGokoro</title> 
   
-  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-
-
-    <title>KodomoGokoro</title>
-    
-    <!-- daisyUIの設定 -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
-    
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
- 
-    <!-- ここまで -->
-
-
-  </head>
+      <!-- Googlefontの設定 -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+      <!-- ここまで -->
+    </head>
   
-  <body>
-  <div class="font-kiwimaru"></div>
-  <%= render 'shared/header' %>
-  <%= yield %>
-  <%= render 'shared/footer' %>
-  </body>
-</html>
+    <body>
+      <div class="font-kiwimaru"></div>
+        <%= render 'shared/header' %>
+        <%= yield %>
+        <%= render 'shared/footer' %>
+    </body>
+  </html>
