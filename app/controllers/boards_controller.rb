@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.all.order(created_at: :desc).page(params[:page]).per(5)
+    @boards = Board.all.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def new

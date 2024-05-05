@@ -1,20 +1,16 @@
-<div class="card w-80 bg-base-100 shadow-xl">
-<% if board.board_image.present? %>
-  <figure><%= image_tag board.board_image.url %></figure>
-<% else %>
-   <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
-<% end %>
-
-<div class="card-body ">
-<h2 class="card-title">「<%= board.title %>」</h2>
-  <p><%= board.name %>さんの作品</p>
-
-  <div class="card-actions justify-end">
-  <div class="twitter">
+<div class="card w-90 h-90 bg-base-100 shadow-xl m-10">
+  <% if board.board_image.present? %>
+  <%= image_tag board.board_image.url %>
+   <% else %>
+   <%= image_tag "board_placeholder.png", class: "card-img-top", width: "100", height:"100" %>
+   <% end %>
+  <div class="card-body ">
+    <h2 class="card-title">「<%= board.title %>」</h2>
+    <p><%= board.name %>さんの作品</p>
+      <div class="card-actions justify-end">
   <%= link_to "https://twitter.com/intent/tweet?url=#{board_url(board)}&text=【I'm a not PERFECT AI】に出展しました%0a%0a%23INPA %23ミニアプリWEEK%0a%0a", class: "btn btn-primary", target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェアする" do %>
   Xでシェアする
   <% end %>
-</div>
   </div>
 </div>
 </div>
