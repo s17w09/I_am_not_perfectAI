@@ -10,7 +10,11 @@
   <p><%= board.name %>さんの作品</p>
 
   <div class="card-actions justify-end">
-    <button class="btn btn-primary">Xでシェアする</button>
+  <div class="twitter">
+  <%= link_to "https://twitter.com/intent/tweet?url=#{board_url(board)}&text=【I'm a not PERFECT AI】に出展しました%0a%0a%23INPA %23ミニアプリWEEK%0a%0a", class: "btn btn-primary", target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェアする" do %>
+  Xでシェアする
+  <% end %>
+</div>
   </div>
 </div>
 </div>
