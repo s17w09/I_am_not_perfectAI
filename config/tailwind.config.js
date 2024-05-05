@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       per: ["Permanent Marker"],
+      kos: ["Kosugi Maru"],
   
     },
 
