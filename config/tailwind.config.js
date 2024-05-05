@@ -8,7 +8,8 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      kiwimaru: ["Kiwi Maru"],
+      per: ["Permanent Marker"],
+      kos: ["Kosugi Maru"],
   
     },
 

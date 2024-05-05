@@ -1,12 +1,17 @@
+<div class="w-5/6 mx-auto max-w-screen-xl">
 <div class='top-wrapper'>
-  <div class='top-inner-text'>
-    <h1>I'm a NOT PERFECT AI</h1>
-    <h1>万能だと思っている生成AIって、実は万能じゃないかも？
-現時点で生成される画像内の文章は、日本語が英語がおかしかったりします。
-実はPERFECTではないAIの画像を、一言で表現してください</h1>
-    <p>※生成された画像は一期一会です。同じ画像は２度と表示できないので、ご自身の媒体に保存をお願いします</p>
-    <%= link_to '試してみる', dreams_path, class: 'btn btn-primary' %>
-    <%= link_to 'みんなの出展作品を見てみる', boards_path, class: 'btn btn-primary' %>
+  <div class='justify-center'>
+    <h1 class= "font-per flex justify-center text-5xl mb-10">I'm a NOT PERFECT AI</h1>
+    <h1 class= "font-kos">万能だと思っている生成AIって、実は万能じゃないかも？
+     現時点で生成される画像内の文章は、日本語が英語がおかしかったりします。
+     実はPERFECTではないAIの画像を、一言で表現してください</h1>
+    <p class= "font-kos">※生成された画像は一期一会です。同じ画像は２度と表示できないので、ご自身の媒体に保存をお願いします</p>
+    </div>
+
+    <div class="font-kos justfy-center">
+    <%= link_to '画像を生成する', dreams_path, class: 'btn btn-primary mt-10' %>
+    <%= link_to '出展作品を見る', boards_path, class: 'btn btn-primary' %>
   </div>
+</div>
 </div>
 
