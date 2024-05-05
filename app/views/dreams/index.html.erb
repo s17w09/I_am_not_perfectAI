@@ -3,7 +3,6 @@
   <h1 class="font-per flex justify-center text-5xl mb-10">Create images</h1>
     <p class= "font-kos flex justify-center">生成された画像は、自動で保存されません。出展する際には必ずご自身の媒体に保存ください。</p>
     <%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
-    <%= form.text_field :prompt %><br/>
     <div class= "flex justify-between lg:justify-center lg:space-x-10">
     <%= form.submit '画像を生成する', class: 'btn btn-primary mb-10' %>
     <%= link_to '作品を出展する', new_board_path, class: 'btn btn-primary mb-10' %>
