@@ -1,20 +1,15 @@
-<div class= "w-5/6 mx-auto max-w-screen-xl">
-  <h1 class="font-per flex justify-center text-5xl">Gallary</h1>
-  <%= link_to '作品を出展する', new_board_path, class: 'btn btn-primary' %>
-  <%= link_to '画像を生成する', dreams_path, class: 'btn btn-primary' %>
-  <div class="row">
-    <div class="col-12">
-      <div>
+<div class= "w-5/6 mx-auto max-w-screen-xl relative">
+  <h1 class="font-per text-5xl mb-10 flex justify-center">Gallary</h1>
+  <div class= "flex justify-between">
+  <%= link_to '画像を生成する', new_board_path, class: 'btn btn-primary mb-10' %>
+  <%= link_to '作品を出展する', dreams_path, class: 'btn btn-primary mb-10' %>
+  </div>
+
         <% if @boards.present? %>
           <%= render @boards %>
           <%= paginate @boards %>
         <% else %>
-          <div class="mb-3">掲示板がありません</div>
+          <p>掲示板がありません</p>
         <% end %>
-      </div>
-    </div>
   </div>
 </div>
-</div>
-
-
