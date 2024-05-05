@@ -10,7 +10,16 @@
   </div>
 <% end %>
 </div>
-<% @image_url%>
+
+<div class="w-5/6 mx-auto max-w-screen-xl flex justify-center mb-10">
+    <% if @error %>
+      <p><%= @error %></p>
+    <% elsif @image_url %>
+      <img src="<%= @image_url %>" alt="Generated Image">
+    <% else %>
+      <p>まだ画像が出力されていません。</p>
+    <% end %>
+    </div>
 </div>
 
 

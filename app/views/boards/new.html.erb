@@ -2,7 +2,7 @@
 <div class="w-5/6 mx-auto max-w-screen-xl">
   <h1 class="font-per flex justify-center text-5xl mb-10">Imagination</h1>
 
-  <div class="justify-center font-kos">
+  <div class="font-kos">
     <%= form_with model: @board do |f| %>
         <%= f.label :出展者名%>
         <%= f.text_field :name, class: "input input-bordered flex items-center gap-2 mb-5" %>
@@ -12,7 +12,8 @@
         <%= f.file_field :board_image, class: "mb-10 file-input file-input-bordered file-input-primary w-full max-w-x"%>
         <%= f.submit '出展する', class: 'btn btn-primary mb-5' %>
     <% end %>
-    <p class="font-kos">※出展者名は10字以内、出展作品は30字以内で入力ください。<br>
+    <p class="font-kos mb-10">
+    ※出展者名は10字以内、出展作品は30字以内で入力ください。<br>
     ※全て入力されないと、出展できません。
     </p>
   </div>
