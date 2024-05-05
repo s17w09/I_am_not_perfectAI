@@ -1,22 +1,17 @@
 <div class="w-5/6 mx-auto max-w-screen-xl">
+  <h1 class="font-per flex justify-center text-5xl">Imagination</h1>
 
-<div class="font-per">Imagination</h1>
-
+  <div class="justify-center font-per">
     <%= form_with model: @board do |f| %>
         <%= f.label :出展者名 %>
         <%= f.text_field :name, class: "input input-bordered flex items-center gap-2" %>
         <%= f.label :出展作品 %>
         <%= f.text_field :title, class: "input input-bordered flex items-center gap-2", rows: 40 %>
-      </div>
-      <div class="w-5/6 mx-auto max-w-screen-xl">
-        <%= f.label :出展作品を額縁に飾る %>
+        <%= f.label :生成した画像をアップロードする %>
         <%= f.file_field :board_image %>
-      </div>
-      <%= f.submit '出展する', class: 'btn btn-primary' %>
-      
+        <%= f.submit '出展する', class: 'btn btn-primary' %>
       <p>子供は迷いません。なので削除機能はありません</p>
       <P>※必須機能ではないので作ってないだけです</p>
     <% end %>
-
-</div>
+  </div>
 </div>
