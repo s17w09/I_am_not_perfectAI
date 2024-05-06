@@ -1,7 +1,11 @@
 <% content_for :title, page_title("Create") %>
 <div class="w-5/6 mx-auto max-w-screen-xl">
   <h1 class="font-per flex justify-center text-5xl mb-10">Create images</h1>
-    <p class= "font-kos flex justify-center">生成された画像は、自動で保存されません。出展する際には必ずご自身の媒体に保存ください。</p>
+    <p class= "font-kos flex justify-center mb-10">
+      STEP1:「画像を生成する」ボタンを押してください。<br>
+      STEP2: 生成された画像を、ご自身の携帯またはPCに保存してください。<br>
+      STEP3:「作品を出展する」ボタンをクリックし、画像にタイトルをつけて出展してください。<br>
+    </p>
     <%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
     <div class= "flex justify-between lg:justify-center lg:space-x-10">
     <%= form.submit '画像を生成する', class: 'btn btn-primary mb-10' %>
