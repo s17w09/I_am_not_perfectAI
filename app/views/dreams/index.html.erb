@@ -6,6 +6,7 @@
       STEP2: 生成された画像を、ご自身の携帯またはPCに保存してください。<br>
       STEP3:「作品を出展する」ボタンをクリックし、画像にタイトルをつけて出展してください。<br>
     </p>
+    <p class= "font-kos flex justify-center mb-10">生成された画像は、自動で保存されません。出展する際には必ずご自身の媒体に保存ください。</p>
     <%= form_with url: dreams_path, method: :post, model: nil, local: true do |form| %>
     <div class= "flex justify-between lg:justify-center lg:space-x-10">
     <%= form.submit '画像を生成する', class: 'btn btn-primary mb-10' %>
