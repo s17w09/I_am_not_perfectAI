@@ -7,6 +7,7 @@
   <div class="card-body ">
     <h2 class="card-title">「<%= board.title %>」</h2>
     <p><%= board.name %>さんの作品</p>
+    <%= l board.created_at, format: :long%>  
       <div class="card-actions justify-end">
   <%= link_to "https://twitter.com/intent/tweet?url=#{boards_url}&text=【I'm a not PERFECT AI】に出展しました%0a%0a%23INPA %23ミニアプリWEEK%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", class: "btn btn-primary", target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェアする" do %>
   Xでシェアする
