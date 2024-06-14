@@ -9,11 +9,11 @@
   <div class= "grid grid-cols-1 lg:grid-cols-3">
         <% if @boards.present? %>
           <%= render @boards %>
-          <div class = "flex justify-center my-10 lg:">
-          <%= paginate @boards %>
-          </div>
+           </div>
+          <div class = "flex justify-center my-10 mb-20>
+          <%= paginate @boards, window: 2 %>
+            </div>
         <% else %>
           <p>掲示板がありません</p>
         <% end %>
-  </div>
 </div>
