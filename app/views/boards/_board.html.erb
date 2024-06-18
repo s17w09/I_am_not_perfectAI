@@ -4,12 +4,12 @@
    <% else %>
    <%= image_tag "board_placeholder.png", class: "card-img-top", width: "100", height:"100" %>
    <% end %>
-  <div class="card-body flex justify-center  ">
+  <div class="card-body flex justify-center font-kos">
     <h2 class="card-title">「<%= board.title %>」</h2>
     <p><%= board.name %>さんの作品</p>
     <p><%= l board.created_at, format: :long%></p>
     <div class="card-actions justify-end">
-    <%= render 'shared/twitter'%>
+    <%= render 'shared/twitter' %>
     </div>
   </div>
 </div>
