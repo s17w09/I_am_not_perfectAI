@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'terms', to: 'static_pages#terms'
   get 'privacy_policy', to: 'static_pages#privacy_policy'
   
-  resources :dreams, only: %i[index create]
+  resources :pictures, only: %i[index create]
   resources :boards, only: %i[index show new create]
   # Defines the root path route ("/")
   # root "posts#index"
