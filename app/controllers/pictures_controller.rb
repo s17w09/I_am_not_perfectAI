@@ -1,4 +1,4 @@
-class DreamsController < ApplicationController
+class PicturesController < ApplicationController
     def index
       @image_url = session[:image_url]
       @error = session[:error]
@@ -15,7 +15,7 @@ class DreamsController < ApplicationController
         session[:error] = nil
       end
     
-      redirect_to dreams_path
+      redirect_to pictures_path
     end
   end
   

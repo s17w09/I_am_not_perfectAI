@@ -12,8 +12,9 @@ module.exports = {
       kos: ["Kosugi Maru"],
   
     },
-
-    extend: {    
+    
+    daisyui: {
+      darkTheme: false,
     },
   },
 
