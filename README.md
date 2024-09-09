@@ -15,7 +15,7 @@ OpenAIが開発した画像生成AI**DALL-E3**によって、画像が生成さ�
 ## ■ 機能一覧
 | 画像生成機能 | 画像投稿機能 |
 | ---- | ---- |
-| [![Image from Gyazo](https://i.gyazo.com/d7c8dbc827044a3d2d326b20cb00e27e.gif)](https://gyazo.com/d7c8dbc827044a3d2d326b20cb00e27e) | [![Image from Gyazo](https://i.gyazo.com/8457581ce1b31449f8f80d96966d78d6.gif)](https://gyazo.com/8457581ce1b31449f8f80d96966d78d6) |
+| [![Image from Gyazo](https://i.gyazo.com/05b321e4926b1e036416ee8cc3a13504.gif)](https://gyazo.com/05b321e4926b1e036416ee8cc3a13504) | [![Image from Gyazo](https://i.gyazo.com/8457581ce1b31449f8f80d96966d78d6.gif)](https://gyazo.com/8457581ce1b31449f8f80d96966d78d6) |
 | 「画像を生成する」ボタンをクリックすると、open_ai_service.rbのプロンプトに仕込んでいるテイストに沿った画像が出力されます。 | 出力された画像に一言タイトルをつけて投稿可能です。他の方の投稿は投稿一覧から確認できます。|
 
 ## ■ 技術スタック
